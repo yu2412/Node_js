@@ -1,0 +1,18 @@
+﻿Option Explicit
+
+' ブラウザで開くURL
+Const URL = "https://github.com/yu2412/Node_js/upload"
+
+' ShellApplicationオブジェクトの作成
+Dim objShell
+Set objShell = CreateObject("Shell.Application")
+
+' Edgeの起動と指定したページを開く
+objShell.ShellExecute ("microsoft-edge:" & URL)
+
+' ShellApplicationオブジェクトの破棄
+Set objShell = Nothing
+
+
+
+'https://syutaku.blog/vbscript-shell-app-exec-ms-edge/
