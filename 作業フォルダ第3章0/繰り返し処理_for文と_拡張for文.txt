@@ -1,0 +1,13 @@
+﻿
+
+'use strict';
+
+let todo=['デザインカンプ作成','データ整理','勉強申し込み','牛乳買う'];
+
+for(let i=0;i<4;i++){
+    console.log(todo[i]);
+}
+
+for(let item of todo){//拡張for文（foreach）
+    console.log(item);
+}

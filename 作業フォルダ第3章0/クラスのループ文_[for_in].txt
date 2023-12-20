@@ -1,0 +1,24 @@
+﻿
+
+'use strict';
+
+let jsbook={title:'javaScript入門',price:2500,stock:3};//{プロパティ名：値} //クラスの作成
+
+//p149
+
+for(let p in jsbook)
+{
+    document.getElementById(p).textContent=jsbook[p];//pは、プロパティ名
+}
+
+
+// document.getElementById('title').textContent=jsbook.title;
+// document.getElementById('price').textContent=jsbook.price+'円';
+// document.getElementById('stock').textContent=jsbook.stock;
+
+//p146
+for(let p in jsbook)
+{
+    console.log(p + '=' + jsbook[p]);//pは、プロパティ名
+}
+

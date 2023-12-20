@@ -1,0 +1,3 @@
+﻿
+
+ <textarea id="timer" name ="time_data" cols="20" rows="1" placeholder="時刻を表示"></textarea><br>

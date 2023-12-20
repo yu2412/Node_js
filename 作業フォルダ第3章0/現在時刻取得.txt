@@ -1,0 +1,9 @@
+﻿
+
+const now = new Date(); // 現在の日時を元にDateオブジェクトのインスタンス作成
+
+console.log( now.toLocaleString() ); // 現在の日時をフォーマットして表示　日付＋時間[2023/9/10 15:50:55]
+
+console.log( now.toLocaleDateString() ); // 現在の日付をフォーマットして表示　日付[2023/9/10]
+
+console.log( now.toLocaleTimeString() ); // 現在の時刻をフォーマットして表示　時間[ 15:36:39]

@@ -1,0 +1,90 @@
+﻿'use strict';
+
+let btn1 =document.getElementById('btn1');
+
+let user_name_first=document.getElementById('user_name_first');
+let user_name_last=document.getElementById('user_name_last');
+let company=document.getElementById('company');
+let email = document.getElementById('email');
+
+let tel = document.getElementById('tel');
+let position = document.getElementById('position');
+let select = document.getElementById('number');
+
+let agree = document.getElementById('agree');
+let msg=document.getElementById('msg');
+
+let anketo=document.getElementsByName('anketo');
+
+
+let checkValue='';
+
+btn1.addEventListener('click',function(e){
+   // e.preventDefault();//ボタンのデフォルトの動作を無効にする
+    //e.off();
+    if(email.value=='')
+    {
+        alert('電話番号が未入力です');
+        return;
+    }
+//----------------【テキストボックス】-------------------------------//
+
+e.preventDefault();//ボタンのデフォルトの動作を無効にする
+    if(tel.value=='')
+    {
+        alert('電話番号が未入力です');
+        return;
+    }
+     
+    if (isNaN(tel.value))
+    {
+        alert('数値で入力してください');
+        return;
+    }
+//----------------【コンボボックス1】-------------------------------//
+    if(position.value=='')
+    {
+        alert('役職種別を選択してください');
+        return;
+    }
+
+//----------------【コンボボックス2】-------------------------------//
+    if(select.value=='')
+    {
+        alert('従業員数を選択してください');
+        return;
+    }
+
+
+
+//----------------【チェックボックス3個】-------------------------------//
+
+let num=0;
+let i;
+    for(i=0;i<anketo.length;i++){
+        if(anketo.item(i).checked){
+        checkValue+=`${anketo.item(i).value}<br>`;
+        num++;
+        }
+
+        if(num<=0)
+        {
+            alert('1つは選択してください');
+            return;
+        }
+    }
+
+
+//----------------【チェックボックス3個の末尾】-------------------------------//
+
+//----------------【チェックボックス】-------------------------------//
+    if(agree.checked)
+    {
+        msg.textContent=`${agree.checked} OK!!`;
+    }else{
+        alert('同意してから送信してください');
+        return;
+    }
+//----------------【チェックボックスの末尾】-------------------------------//
+});
+

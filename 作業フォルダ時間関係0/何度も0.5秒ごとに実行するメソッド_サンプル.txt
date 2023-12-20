@@ -1,0 +1,12 @@
+﻿
+
+    <script>
+        'use strict';
+        function Time_prev()
+        {
+            const now=new Date();// 現在の日時を元にDateオブジェクトのインスタンス作成
+            let nowtime= now.toLocaleTimeString();
+            document.getElementById('timer').textContent=nowtime;
+        }
+        setInterval(Time_prev, 500);
+    </script>

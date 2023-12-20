@@ -1,0 +1,15 @@
+﻿
+
+'use strict';
+
+const now=new Date();//Dataオブジェクトを定数に格納して初期化
+console.log(now);//解説用
+const year =now.getFullYear();//年
+const month=now.getMonth();//0月～11月　※0月から数えるので１ずれて返ってくる
+const date = now.getDate();//日付
+const hour= now.getHours();//0時～23時　
+const min=now.getMinutes();//分
+
+const output=`${year}年${month+1}月${date} ${hour}時${min}`;//monthだけ１ずれているから１を加算する
+
+    document.getElementById('output').textContent=output;

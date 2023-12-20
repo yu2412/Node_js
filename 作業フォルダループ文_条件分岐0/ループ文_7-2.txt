@@ -1,0 +1,49 @@
+﻿'use strict';
+
+// let popimg =document.getElementById('img1');//Aタグ
+let thumbnailList=document.getElementsByClassName('thumbnails');
+let cover =document.getElementById('cover');
+let largeImg=document.getElementById('largeImg');
+
+let imgL=document.getElementById('imgL');//拡大画像
+let i;
+
+//---------- 開いた直後に実行される  各thumbnailListの要素（ class名が 'thumbnails'のものに対してクリックイベントを付与している作業---------------
+
+for(i=0;i<thumbnailList.length;i++){
+    thumbnailList[i].addEventListener('click',function(e){
+        e.preventDefault();//Aタグの動作を無効にする
+        cover.className='cover';
+        largeImg.className='largeImg';
+
+        imgL.src=this.href;
+    });
+}
+//----------------------------
+
+// popimg.addEventListener('click',function(e){
+//     e.preventDefault();
+
+//     cover.className='cover';
+//     largeImg.className='largeImg';
+// });
+
+//--------------------------------------------------------//
+largeImg.addEventListener('click',function(){
+    //cover.className='hidden';
+    //largeImg.className='hidden';
+    popupClose();
+});
+
+cover.addEventListener('click',function(){
+    // cover.className='hidden';
+    // largeImg.className='hidden';
+    popupClose();
+});
+
+function popupClose(){
+    cover.className='hidden';
+    largeImg.className='hidden';
+}
+
+

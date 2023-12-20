@@ -1,0 +1,11 @@
+﻿
+
+<style>
+    table{
+        border-collapse:collapse;
+    }
+    td{
+        padding: 4px 8px;/* 上下左右*/
+        border: 1px solid #23628f;
+    }
+</style>

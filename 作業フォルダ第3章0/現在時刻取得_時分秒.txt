@@ -1,0 +1,6 @@
+﻿
+
+let nowTime = new Date(); //  現在日時を得る
+let nowHour = nowTime.getHours(); // 時間を抜き出す
+let nowMin  = nowTime.getMinutes(); // 分数を抜き出す
+let nowSec  = nowTime.getSeconds(); // 秒数を抜き出す

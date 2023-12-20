@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>k検証コントロール</title>
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+<link href="../../_common/css/style.css" rel="stylesheet">
+<link href="special.css" rel="stylesheet">
+</head>
+<body>
+
+
+    <form>
+        <h3>必須入力 文字数チェック 値の一致チェック </h3>
+        パスワード１：<input type="password" name="pas1" id="pas1">
+        パスワード２：<input type="password" name="pas2" id="pas2">
+        <button id="btn1">送信</button><br>
+    </form>
+    <div id="msg"></div>
+<footer>
+<div class="container">
+<p>JavaScript Samples</p>
+</div><!-- /.container -->
+</footer>
+<script src="jquery-3.41.min.js"></script>
+<script src="js/check3.js"></script>
+</body>
+</html>
+

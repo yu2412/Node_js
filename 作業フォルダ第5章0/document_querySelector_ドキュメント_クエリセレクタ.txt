@@ -1,0 +1,5 @@
+﻿
+
+document.querySelector('セレクタ').selected = true;//セレクタ部分はCSSと同じように記入して指定できる
+document.querySelector('#id名').selected = true;//id名で取得
+document.querySelector('.class名').selected = true;//クラス名で取得

@@ -1,0 +1,50 @@
+﻿'use strict';
+
+{ //ブロックスコープ（宣言した変数や定数が外部からアクセスできない
+    // クイズを作成する関数
+
+function render (quiz){
+    const main=document.querySelector('main');
+    const section=document.createElement('section');
+    const h2=document.createElement('h2');
+    h2.textContent=quiz[0];
+
+    const ul=document.createElement('ul');
+
+
+    for(let i=1;i<quiz.length-1;i++){
+
+        const li=document.createElement('li');
+        li.textContent=quiz[i];
+        li.addEventListener('click',()=>{
+            if(quiz[4]===i-1){
+                li.classList.add('correct');
+            }else{
+                li.classList.add('wrong');
+            }
+        });
+
+        ul.appendChild(li);
+    }
+
+    section.appendChild(h2);
+    section.appendChild(ul);
+    main.appendChild(section);
+
+}//function renderの末尾
+
+const quizzes=[
+    ['問題1 3月3日は何の日？','耳の日','口の日','端牛の節句',0],
+    ['問題2 1+1=？','0','2','100',1],
+    ['問題3 うさま？','あ','い','る',2],
+];
+
+
+quizzes.forEach((quiz) => {
+        render(quiz);
+});
+
+
+}//ブロックの末尾
+
+

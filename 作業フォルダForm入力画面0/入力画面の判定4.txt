@@ -1,0 +1,31 @@
+﻿'use strict';
+
+let pas1=document.getElementById('pas1')
+let pas2=document.getElementById('pas2')
+let btn1 =document.getElementById('btn1');
+let msg=document.getElementById('msg');
+
+btn1.addEventListener('click',function(e){
+    e.preventDefault();//ボタンのデフォルトの動作を無効にする
+
+    if(pas1.value.length<4) {
+        alert('パスワード1は4文字以上です');
+    } else if(pas2.value.length<4) {
+        alert('パスワード2は4文字以上です');
+    } 
+
+
+//--------------------【　一致チェック（値が同じか判定）　】--------------------------//
+
+    if(pas1.value!==pas2.value){//値が　非数なら真、数値なら偽　数値かそれ以外か判定するメソッド
+        alert('同じ値を入力してください');
+    }else{
+       // msg.textContent=`<h1>${pas1.value}</h1>`;
+        msg.innerHTML=`<h1>${pas1.value}</h1>`;
+    }
+
+//--------------------【　文字数チェック（）　】--------------------------//
+
+
+
+});

@@ -1,0 +1,24 @@
+﻿
+
+'use strict';
+
+
+const Langs=document.querySelector('html').lang;//今開いているHTMLから「lang属性」の値を取得する
+
+
+if(lang === 'ja') {//開かれたhtmlファイルの言語が「ja」だった場合
+    document.querySelector('option[value="index.html"]').selected = true;//option[]オプション属性の値が[index.html]のコンボボックスのitemを選択後のページの選択プロパティをtrueにする
+} else if(lang === 'en') {
+    document.querySelector('option[value="index-en.html"]').selected = true;
+} else if(lang === 'zh') {
+    document.querySelector('option[value="index-zh.html"]').selected = true;
+}
+
+
+
+
+
+
+document.getElementById('form').select.onchange = function() {//コンボボックスの選択が変更されると起動するファンクション関数
+    location.href = document.getElementById('form').select.value;//「location.href 」値の場所に移動する
+}

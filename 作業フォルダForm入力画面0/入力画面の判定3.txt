@@ -1,0 +1,71 @@
+﻿'use strict';
+
+let age=document.getElementById('age')
+let btn1 =document.getElementById('btn1');
+let msg=document.getElementById('msg');
+
+btn1.addEventListener('click',function(e){
+    e.preventDefault();//ボタンのデフォルトの動作を無効にする
+
+    if(age.value=== '')
+    {
+        alert('必ず入力してください');
+        return;
+    }
+
+    //--------------------【　データ型チェック（数値かチェックする）　】--------------------------//
+
+    if(isNaN(age.value)){//値が　非数なら真、数値なら偽　数値かそれ以外か判定するメソッド
+        alert('数値で入力してください');
+    }
+
+//--------------------【　範囲チェック　】--------------------------//
+    let age2=parseInt(age.value);
+    if(age2<=18||age2>70){
+        alert('18歳以上７０歳未満で入力してください');
+        return;
+    }else{
+        // msg.textContent=`年齢${age.value}歳`;
+        msg.textContent=`年齢${age2}歳`;
+   }
+
+});
+
+
+
+
+
+
+
+//--------------------【　一致チェック（値が同じか判定）　】--------------------------//
+let email1=document.getElementById('email1')
+let email2 =document.getElementById('email2');
+let btn4 =document.getElementById('btn4');
+
+btn4.addEventListener('click',function(e){
+    e.preventDefault();//ボタンのデフォルトの動作を無効にする
+
+
+    if(email1.value!==email2.value){//値が　非数なら真、数値なら偽　数値かそれ以外か判定するメソッド
+        alert('同じ値を入力してください');
+    }else{
+        msg.textContent=`メールアドレス${email1.value}`;
+    }
+
+});
+//--------------------【　パスワードチェック（）　】--------------------------//
+let pass=document.getElementById('pass')
+let btn5 =document.getElementById('btn5');
+
+
+btn5.addEventListener('click',function(e){
+    e.preventDefault();//ボタンのデフォルトの動作を無効にする
+
+
+    if(pass.value.length<4){//値の文字数
+        alert('パスワードは4文字以上です');
+    }else{
+        msg.textContent=`<h1>${pass.value}</h1>`;
+    }
+
+});

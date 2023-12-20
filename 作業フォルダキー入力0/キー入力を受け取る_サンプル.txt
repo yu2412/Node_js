@@ -1,0 +1,39 @@
+﻿//------------[  keydown.js   ]-------------
+'use strict';
+
+let gameStart=document.getElementById('gameStart')
+let qsKey=document.getElementById('qsKey')
+
+let target=document.getElementById('msg');
+
+function keydown (){
+    target.innerHTML="キーが押されました KeyCode :"+event.keyCode;
+}
+
+document.onkeydown=keydown;//キーボードの入力を受け取る※１
+
+//document.addEventListener('keydown',keydown,false); //イベントリスナーで書いた場合
+
+
+//------------[  keydown.html   ]-------------
+
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>キーダウンイベント</title>
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+
+</head>
+<body>
+
+       <input  name="start" type="button" value="　スタート　"  id="gameStart">
+        <div id="qsKey">問題表示</div>
+        <div id="msg">結果表示</div>
+
+
+<script src="js/keydown.js"></script>
+</body>
+</html>
+

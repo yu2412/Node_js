@@ -1,0 +1,96 @@
+﻿//-------------[keydown.js]-----------------//
+'use strict';
+const words_Const = [//定数配列
+    'apple',
+    'orange',
+    'peach',
+    'banana',
+    'lemon'
+];
+
+let words = [
+    'apple',
+    'orange',
+    'peach',
+    'banana',
+    'lemon'
+];
+
+let word;
+let loc=0;
+let startTime;
+let isPlaying=false;
+
+
+let Start=document.getElementById('gameStart')
+let quest=document.getElementById('quest')
+let result=document.getElementById('result');
+
+function setWord (){
+    word=words.splice(Math.floor(Math.random()*words.length),1)[0];
+    quest.innerHTML=word;
+    loc=0;
+}
+
+function keydown (){
+    target.innerHTML="キーが押されました KeyCode :"+event.keyCode;
+}
+
+Start.addEventListener('click',function(){
+    if(!isPlaying)
+    {
+        words=words_Const.concat();
+        result.textContent='';
+        startTime=Date.now();
+        isPlaying=true;
+        setWord();
+    }
+}); //イベントリスナー
+
+document.addEventListener('keydown',function(e)
+{
+    if(e.key===word[loc])
+    {
+        loc++;
+        //alert('正解');
+        quest.innerHTML='_'.repeat(loc)+word.substring(loc);
+    }
+    else
+    {
+        //alert('不正解');
+    }
+
+    if(loc===word.length){
+        if(words.length===0){
+            const keikaTime=((Date.now()-startTime)/1000).toFixed(2);
+
+            result.textContent='終了！'+keikaTime+' 秒';
+            quest.textContent='クリックしたら開始!';
+            isPlaying=false;
+            return;
+        }
+        setWord();
+    }
+}); 
+
+//----------------[html]--------------//
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>タイピング</title>
+<link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+
+</head>
+<body>
+
+       <input  name="start" type="button" value="　スタート　"  id="gameStart">
+        <div id="quest">問題表示</div>
+        <div id="result">結果表示</div>
+
+
+<script src="js/keydown.js"></script>
+</body>
+</html>
+

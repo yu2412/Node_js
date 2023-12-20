@@ -1,0 +1,19 @@
+﻿                                    <!-- 電話番号テキストボックス -->
+<input type="text" id="tel" name="tel" title="tel" placeholder="例）09012345678" class="input_text" value="" required>
+
+<p class="alert_msg tel_alert ">電話番号を入力してください</p>
+                                    <!-- 電話番号テキストボックスの末尾 -->
+
+
+※JavaScriptでクリックイベントのデフォルト動作を無効にすると必須入力判定が行われなくなる
+
+btn1.addEventListener('click',function(e){
+    e.preventDefault();//ボタンのデフォルトの動作を無効にする
+
+    if(name.value=== '')
+    {
+        alert('必ず入力してください');
+    }else{
+        msg.textContent=`${name.value} さん、こんにちは！`
+    }
+});

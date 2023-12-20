@@ -1,0 +1,35 @@
+﻿
+
+'use strict';
+
+function fizzbuzz(num)
+{
+    if(num%3===0&&num%5===0)
+    {
+        return'fizzbuzz';
+    }else if (num%3===0)
+    {
+        return 'fizz';
+    }else if(num%5===0)
+    {
+        return 'buzz';
+    }else
+    {
+        return num;
+    }
+}
+
+console.log(fizzbuzz(1));
+console.log(fizzbuzz(6));
+console.log(fizzbuzz(10));
+console.log(fizzbuzz(15));
+
+let i=1;
+let output=document.getElementById('output');
+
+while(i<=30)
+{
+    output.innerHTML+=(i+' : '+fizzbuzz(i)+'<br>');
+    console.log(fizzbuzz(i));
+    i+=1;
+}
