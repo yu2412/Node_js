@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoリスト</title>
+</head>
+<body>
+    <form>
+        <h2>入力画面</h2>
+        <div id="input">
+            <p>予定：<input type="text" id="yotei" required></p>
+            <p>日付：<input type="datetime-local" id="date" required></p>
+            <p><button id="push">送信</button></p>
+        </div>   
+    </form>
+
+    <hr>
+    <ol id="todo">
+            <span>[予定]　[日付] <button >完了</button></span>
+        <hr>
+    </ol>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

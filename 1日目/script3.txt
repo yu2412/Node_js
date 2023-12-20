@@ -1,0 +1,67 @@
+'use strict'
+
+
+let todo = document.querySelector('#todo');
+
+const push=document.querySelector('#push');
+push.addEventListener('click', funClick,false);
+
+
+function funClick(event){
+    
+    event.preventDefault();
+
+    console.log(this.id);
+
+    let yotei = document.querySelector('#yotei');
+    let date = document.querySelector('#date');
+
+// ----------------------------
+// 追加する要素を作成します
+// ----------------------------
+    const newElement = document.createElement("span"); // 要素作成
+    $(newElement).addClass('btn');
+
+    const ol = document.querySelector('ol');
+    const btn = document.createElement('button');
+
+   // btn.addEventListener("click", clicDelete, false);
+    $(btn).on('click',(event) => {
+   
+        event.preventDefault();
+        const $this = $(event.currentTarget);
+       // const $this=$(event.currentTarget).parentsUntil(".btn");
+        console.log($this.closest());//);
+        $(event.currentTarget).parent().remove();
+        // $(event.currentTarget).parent().find(".btn").remove();
+        //$this.parent().remove();
+    });
+  //      btn.parent().remove();
+
+
+    const hr = document.createElement('hr');
+
+    let newtxt1 = document.createTextNode('[予定]：'+yotei.value+' [日付]：'+date.value); // テキストノードを作成
+    newElement.appendChild(newtxt1); // span要素にテキストノードを追加
+    newElement.appendChild(btn);
+    newElement.appendChild(hr);
+    
+    let newtext2 = document.createTextNode('完了'); // テキストノードを作成
+    btn.appendChild(newtext2); // span要素にテキストノードを追加
+
+
+    ol.appendChild(newElement);
+
+
+}
+
+// function clicDelete(event){
+    
+//     event.preventDefault();
+
+//     $("button").on("click", function () {
+//         console.log(this.name);
+//         this.remove();
+//     });
+
+// }
