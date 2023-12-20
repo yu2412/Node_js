@@ -1,0 +1,51 @@
+①
+node.jsがインストールされたPC
+
+②プログラミングをする場所にフォルダを作成して、VS Codeのターミナルから カレントディレクトリに移動する
+cd list-app
+
+③コマンドでパッケージをインストール
+npm init --yes
+	↓
+これは、npmの設定ファイルであるpackage.jsonを生成するコマンドです。
+package.jsonには、npmパッケージの設定情報などが書き込まれていきます。
+
+④express と ejs をインストール
+npm install express ejs
+
+
+⑤サーバーを起動してページを表示しよう
+  ・フォルダをの下に /Download/list-app/app.js/Views/hello.ejs
+   「app.js」と「フォルダ Views」の中に「hello.ejs」のファイル作成
+
+⑥入力↓
+//--------[app.js]--------------------------//
+const express = require('express');
+
+const app = express();
+
+app.get('/', (req, res) => {
+  res.render('hello.ejs');
+});
+
+app.listen(3000);
+//--------------------//
+
+//--------[hello.ejs]--------------------------//
+
+<h1>Hello World</h1>
+//---------------------------------//
+
+⑦サーバ起動 ➡ 【CTRL + C】で停止
+node app.js
+
+⑧URL開く
+ブラウザを開いて「localhost:3000」というURLにアクセスします。
+
+
+※(おまけ) ファイル更新時に自動でサーバーが再起動するようにしよう
+	①nodemonをインストール
+npm install -g nodemon
+
+	②起動の仕方  【CTRL + C】で停止
+nodemon app.js
