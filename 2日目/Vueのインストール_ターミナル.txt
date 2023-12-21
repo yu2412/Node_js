@@ -1,0 +1,44 @@
+
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト> node -v
+v20.10.0
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト> npm create vite@latest
+Need to install the following packages:
+create-vite@5.1.0
+Ok to proceed? (y) y
+√ Project name: ... todolist
+√ Select a framework: » Vue
+√ Select a variant: » TypeScript
+
+Scaffolding project in C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト\todolist...
+
+  cd todolist
+  npm install
+  npm run dev
+
+npm notice
+npm notice New patch version of npm available! 10.2.3 -> 10.2.5
+npm notice Run npm install -g npm@10.2.5 to update!
+npm notice
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト> cd todolist
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト\todolist> npm install      
+
+added 44 packages, and audited 45 packages in 11s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト\todolist> npm run dev      
+
+> todolist@0.0.0 dev
+> vite
+
+
+  VITE v5.0.10  ready in 683 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+
+
+  ※https://qiita.com/kensoz/items/053c7103cd073d09f81e
