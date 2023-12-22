@@ -1,0 +1,74 @@
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト\todolist> npm install moment --save
+
+added 1 package, and audited 46 packages in 3s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト\todolist> npm run dev
+
+> todolist@0.0.0 dev
+> vite
+
+Re-optimizing dependencies because lockfile has changed
+
+  VITE v5.0.10  ready in 838 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose  
+  ➜  press h + enter to show help
+13:33:42 [vite] hmr update /src/App.vue
+13:33:42 [vite] ✨ new dependencies optimized: moment
+13:33:42 [vite] ✨ optimized dependencies changed. reloading
+
+
+13:41:55 [vite] hmr update /src/App.vue (x8)
+^C^Cバッチ ジョブを終了しますか (Y/N)? y
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト\todolist> npm install @vuepic/vue-datepicker
+
+added 5 packages, and audited 51 packages in 42s
+
+5 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト\todolist> npm run dev
+
+> todolist@0.0.0 dev
+> vite
+
+Re-optimizing dependencies because lockfile has changed
+
+  VITE v5.0.10  ready in 720 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+13:49:51 [vite] hmr update /src/App.vue
+13:58:03 [vite] hmr update /src/App.vue (x2)
+13:59:20 [vite] hmr update /src/App.vue (x3)
+14:00:23 [vite] hmr update /src/App.vue (x4)
+14:01:06 [vite] hmr update /src/App.vue (x5)
+14:04:36 [vite] hmr update /src/App.vue (x6)
+^C^Cバッチ ジョブを終了しますか (Y/N)? y
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト\todolist> npm install v-calendar@next
+
+added 7 packages, and audited 58 packages in 6s
+
+6 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\taiken\Downloads\ToDoリスト作成\1日目\ToDoリスト\todolist> npm run dev
+
+> todolist@0.0.0 dev
+> vite
+
+Re-optimizing dependencies because lockfile has changed
+
+  VITE v5.0.10  ready in 710 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
